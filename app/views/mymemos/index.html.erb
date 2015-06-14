@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Mymemos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mymemos.each do |mymemo| %>
+      <tr>
+        <td><%= mymemo.title %></td>
+        <td><%= mymemo.body %></td>
+        <td><%= link_to 'Show', mymemo %></td>
+        <td><%= link_to 'Edit', edit_mymemo_path(mymemo) %></td>
+        <td><%= link_to 'Destroy', mymemo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mymemo', new_mymemo_path %>

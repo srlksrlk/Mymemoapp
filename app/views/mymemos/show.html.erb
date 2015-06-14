@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mymemo.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @mymemo.body %>
+</p>
+
+<%= link_to 'Edit', edit_mymemo_path(@mymemo) %> |
+<%= link_to 'Back', mymemos_path %>
